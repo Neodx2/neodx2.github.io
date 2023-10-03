@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Gabarito&display=swap');
+
+.navbar {
+    background-color: #006875;
+}
+
+body {
+    background-color: #003036;
+    color: #f7feff;
+    font-family: 'Gabarito'
+}
+
+.title {
+    font-size: 72px;
+    font-weight: 800px;
+    text-align: center
+}
