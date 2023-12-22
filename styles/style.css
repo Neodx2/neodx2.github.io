@@ -1,29 +1,16 @@
-/*font*/
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,500&display=swap');
 
-/*slide keyframes*/
-@keyframes slide-right {
+@keyframes slide-down {
   0% {
-    transform: translateX(100%);
+    transform: translateY(100%);
   }
 
   100% {
-    transform: translateX(0);
+    transform: translateY(0);
   }
 }
 
 
-@keyframes slide-left {
-  0% {
-    transform: translateX(-100%);
-  }
-
-  100% {
-    transform: translateX(0);
-  }
-}
-
-/*whole document*/
 body,
 html {
 
@@ -42,7 +29,6 @@ html {
   'opsz' 24
 }
 
-/*navbar*/
 #nav {
 
   height: 50px;
@@ -59,7 +45,6 @@ html {
 
 }
 
-/* elements inside navbar*/
 #nav a {
 
   text-decoration: none;
@@ -81,8 +66,6 @@ html {
 }
 
 
-
-/*product promo header*/
 #header {
 
   height: 400px;
@@ -92,18 +75,17 @@ html {
   color: #fff;
   text-align: right;
   display: flex;
-  align-items: flex-start;
+  align-items: center;
+  justify-content: center;
 
 }
 
 #header-text {
 
-  width: 40%;
+  width: 50%;
   height: 80%;
-  margin: 0px 50px 50px;
-  animation: 1s ease-out 0s 1 slide-right;
-  justify-self: right;
-  float: right;
+  margin: 0;
+  animation: 1s cubic-bezier(0.075, 0.82, 0.165, 1) 0s 1 slide-down;
 
 }
 
@@ -118,29 +100,7 @@ html {
 
 #header-text h2 {
   font-size: 45px;
-}
-
-#header-img {
-
-  justify-self: left;
-  height: 100%;
-  width: 40%;
-  margin: 0;
-  animation: 1s ease-out 0s 1 slide-left;
-  display:flex;
-  align-items:end;
-  justify-content: left;
-
-}
-
-#header-img img {
-
-  height: 400px;
-  width: 550px;
-  display: block;
-  float: right;
-  margin: 0;
-
+  animation-delay: 0.5s;
 }
 
 .button {
@@ -169,7 +129,6 @@ html {
 
 }
 
-/*gradient text*/
 span.header-text-emphasis {
 
   background: -webkit-linear-gradient(right, #00e1ff, #0095a8);
