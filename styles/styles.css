@@ -1,4 +1,18 @@
 html, body {
     margin: 0;
-    font-family: 'Rethink Sans', sans-serif;
+    font-family: 'Roboto Mono', monospace;
+}
+
+nav {
+    margin: 0;
+    padding: 10px;
+    width: 100%;
+    background-color: grey;
+}
+
+header {
+    margin: 0;
+    padding: 10px;
+    width: 100%;
+    background-color: aqua;
 }
