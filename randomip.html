@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random IP</title>
+</head>
+<body>
+
+    <!--
+        PLEASE NOTE:
+        THIS IS A JOKE WEBSITE!
+        The website has a 50% chance to return your real IP instead of a random one.
+        It would be real funny if you fell for it but I respect that everyone deserves privacy, so please don't send your result to a stranger!
+        The website does not store your IP. You can look through the code for proof.
+    -->
+
+    <h1>Random IPv4 Address Generator</h1>
+    <p>The perfect tool to trick your friends with fake IPs!</p>
+    <button onclick="show_ip()">Generate IP</button>
+    <p id="ip"></p>
+
+    <script>
+        function generate_rand_ip() {
+            var ip1 = Math.floor(Math.random() * 256);
+            var ip2 = Math.floor(Math.random() * 256);
+            var ip3 = Math.floor(Math.random() * 256);
+            var ip4 = Math.floor(Math.random() * 256);
+
+            var ip = [
+                ip1.toString(),
+                ip2.toString(),
+                ip3.toString(),
+                ip4.toString()
+            ]
+
+            return ip.join(".");
+        }
+
+        async function generate_real_ip() {
+            try {
+                const response = await fetch("https://api.ipify.org/?format=json");
+                const data = await response.json();
+                return data.ip;
+            } catch (error) {
+                return "Error";
+            }
+        }
+
+        function show_ip() {
+            var outcome = Math.floor(Math.random() * 2);
+            var ipElement = document.getElementById("ip");
+            if (outcome === 0) {
+                ipElement.textContent = generate_rand_ip();
+            } else {
+                generate_real_ip().then((ip) => {
+                    ipElement.textContent = ip;
+                });
+            }
+        }
+    </script>
+</body>
+</html>
