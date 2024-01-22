@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time</title>
+</head>
+<body>
+    <span id="time"></span>
+    <script>
+        async function fetch_time() {
+            let response = await fetch("https://worldtimeapi.org/api/timezone/Europe/London");
+            let time_obj = await response.json();
+            document.getElementById("time").innerHTML = time_obj.utc_datetime;
+        }
+        fetch_time();
+    </script>  
+</body>
+</html>
