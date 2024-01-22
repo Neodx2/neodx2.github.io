@@ -6,12 +6,33 @@
     <title>Time</title>
 </head>
 <body>
+    <span id="date"></span>
     <span id="time"></span>
+    <span id="timezone"></span>
+
     <script>
         async function fetch_time() {
+            const weekdays = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+            const months = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+
             let response = await fetch("https://worldtimeapi.org/api/timezone/Europe/London");
             let time_obj = await response.json();
-            document.getElementById("time").innerHTML = time_obj.utc_datetime;
+
+            let date = new Date(time_obj.utc_datetime);
+
+            let day = weekdays[date.getUTCDay()];
+            let date_num = date.getUTCDate();
+            let month = months[date.getUTCMonth()];
+            let year = date.getUTCFullYear(); 
+
+            let hours = date.getUTCHours().toString().padStart(2, '0');
+            let minutes = date.getUTCMinutes().toString().padStart(2, '0');
+            let seconds = date.getUTCSeconds().toString().padStart(2, '0');
+            let mseconds = date.getUTCMilliseconds().toString().padStart(2, '0');
+            
+            document.getElementById("date").innerHTML = `${day} ${date_num} ${month} ${year}`;
+            document.getElementById("time").innerHTML = `${hours}:${minutes}:${seconds}.${mseconds}`;
+            document.getElementById("timezone").innerHTML = `Timezone: UTC+`;
         }
         fetch_time();
     </script>  
