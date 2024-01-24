@@ -24,6 +24,7 @@
             let date_num = date.getUTCDate();
             let month = months[date.getUTCMonth()];
             let year = date.getUTCFullYear(); 
+            let timezone = date.getUTCTimezoneOffset();
 
             let hours = date.getUTCHours().toString().padStart(2, '0');
             let minutes = date.getUTCMinutes().toString().padStart(2, '0');
@@ -32,7 +33,7 @@
             
             document.getElementById("date").innerHTML = `${day} ${date_num} ${month} ${year}`;
             document.getElementById("time").innerHTML = `${hours}:${minutes}:${seconds}.${mseconds}`;
-            document.getElementById("timezone").innerHTML = `Timezone: UTC+`;
+            document.getElementById("timezone").innerHTML = `Timezone: UTC${timezone}`;
         }
         fetch_time();
     </script>  
