@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Time</title>
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="styles/time.css">
 </head>
 <body>
@@ -35,7 +39,7 @@
             
             document.getElementById("date").innerHTML = `${day} ${date_num} ${month} ${year}`;
             document.getElementById("time").innerHTML = `${hours}:${minutes}:${seconds}.${mseconds}`;
-            document.getElementById("timezone").innerHTML = `Timezone: UTC ${timezone}`;
+            document.getElementById("timezone").innerHTML = `Timezone ${timezone}`;
         
         }
         setInterval(fetch_time, 1)
