@@ -13,6 +13,7 @@
     <p id="timezone"></p>
 
     <script>
+        setInterval(fetch_time, 1);
         async function fetch_time() {
             const weekdays = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
             const months = ["January","February","March","April","May","June","July","August","September","October","November","December"];
@@ -22,24 +23,22 @@
 
             let date = new Date(time_obj.utc_datetime);
 
-            let day = weekdays[date.getUTCDay()];
-            let date_num = date.getUTCDate();
-            let month = months[date.getUTCMonth()];
-            let year = date.getUTCFullYear(); 
+            let day = weekdays[date.getDay()];
+            let date_num = date.getDate();
+            let month = months[date.getMonth()];
+            let year = date.getFullYear(); 
             let timezone = time_obj.utc_offset;
 
-            let hours = date.getUTCHours().toString().padStart(2, '0');
-            let minutes = date.getUTCMinutes().toString().padStart(2, '0');
-            let seconds = date.getUTCSeconds().toString().padStart(2, '0');
-            let mseconds = date.getUTCMilliseconds().toString().padStart(2, '0');
+            let hours = date.getHours().toString().padStart(2, '0');
+            let minutes = date.getMinutes().toString().padStart(2, '0');
+            let seconds = date.getSeconds().toString().padStart(2, '0');
+            let mseconds = date.getMilliseconds().toString().padStart(2, '0');
             
             document.getElementById("date").innerHTML = `${day} ${date_num} ${month} ${year}`;
             document.getElementById("time").innerHTML = `${hours}:${minutes}:${seconds}.${mseconds}`;
             document.getElementById("timezone").innerHTML = `Timezone: UTC ${timezone}`;
         
         }
-        setInterval(fetch_time, 1)
-        fetch_time();
     </script>  
 </body>
 </html>
