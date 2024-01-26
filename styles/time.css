@@ -8,3 +8,13 @@ body {
     text-align: center;
 }
 
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#time {
+    font-size: 48px;
+    font-weight: 800;
+}

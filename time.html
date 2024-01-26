@@ -13,7 +13,12 @@
 </head>
 <body>
     <p id="date"></p>
-    <h1 id="time"></h1>
+
+    <div class="time-container flex">
+        <span id="time"></span>
+        <span id="ms"></span>
+    </div>
+
     <p id="timezone"></p>
 
     <script>
@@ -39,7 +44,8 @@
             let mseconds = date.getMilliseconds().toString().padStart(2, '0');
             
             document.getElementById("date").innerHTML = `${day} ${date_num} ${month} ${year}`;
-            document.getElementById("time").innerHTML = `${hours}:${minutes}:${seconds}.${mseconds}`;
+            document.getElementById("time").innerHTML = `${hours}:${minutes}:${seconds}`;
+            document.getElementById("ms").innerHTML = `.${mseconds}`;
             document.getElementById("timezone").innerHTML = `Timezone ${timezone}`;
         
         }
