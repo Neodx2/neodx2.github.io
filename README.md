@@ -1,6 +1,8 @@
 # neodarkless.me
 ## VISIT HERE:
 https://neodarkless.me
+https://neodarkless.me/time
+https://neodarkless.me/randomip
 ## USEFUL TOOLS FOR ME
 ```npm install --global http-server```
 ```http-server```
