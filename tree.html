@@ -15,9 +15,10 @@
 </head>
 <body>
     <img src="img/tree_stage0.png" alt="Tree" id="tree">
-    <p id="status">Your tree is growing...</p>
-    <button id="reload" onclick="reload_tree()">Plant another tree</button>
-
+    <div>
+        <p id="status">Your tree is growing...</p>
+        <button id="reload" onclick="reload_tree()">Plant another tree</button>    
+    </div>
     <script>
         const stages = [
             "img/tree_stage0.png",
@@ -38,7 +39,7 @@
         }
 
         reload_tree();
-        setInterval(grow_tree, 100);
+        setInterval(grow_tree, 600000);
         function grow_tree() {
             if (stage <= 4) {
                 status.innerHTML = "Your tree is growing...";
@@ -46,7 +47,7 @@
                 stage++;
             } else {
                 status.innerHTML = "Your tree is fully grown! Plant another?";
-                reload.style.display = "block";
+                reload.style.display = "inline";
             }
         }
     </script>
