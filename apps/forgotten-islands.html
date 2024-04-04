@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <title>Forgotten Islands</title>
+
+    <style>
+        html, body {
+            background: black;
+            color: white;
+            font-family: "Inter", sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            font-size: 24px;
+        }
+
+        h1 {
+            font-size: 56px;
+        }
+        
+        header {
+            width: 100%;
+            background: #28242b;
+            height: 500px;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+        }
+
+        header img {
+            height: 450px;
+            width: 450px;
+            border: 1px solid transparent;
+            border-radius: 15px;
+            box-shadow: 0px 10px 15px -3px rgba(0,0,0,0.2);
+        }
+
+        header h1 {
+            font-size: 72px;
+            font-weight: 800;
+        }
+
+        header div {
+            margin-left: 100px;
+            text-align: left;
+        }
+        
+        .discord {
+            text-decoration: none;
+            color: #b6a4c4;
+            transition-duration: 200ms;
+        }
+
+        .discord:hover {
+            color: #e298ff;
+            font-weight: 600;
+            letter-spacing: 2px;
+        }
+        
+        main {
+            width: 70%;
+            margin: auto;
+        }
+
+        .island-cols {
+            height: 600px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .island-col {
+            height: 100%;
+            width: 25%;
+            padding: 50px;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .island-col img {
+            height: auto;
+            width: 100%;
+        }
+        
+        .island-col h2 {
+            font-size: 42px;
+        }
+
+        .desert-em {
+            color: sandybrown;
+            letter-spacing: 0.2em;
+            font-weight: 300;
+        }
+
+        .snow-em {
+            color:lightcyan;
+            letter-spacing: -0.1em;
+            font-weight: 100;
+        }
+
+        .plains-em { 
+            color: lightgreen; 
+            font-weight: 400;
+        }
+
+        .jungle-em {
+            background: -webkit-linear-gradient(0deg, rgba(93,29,0,1) 10%, rgba(0,255,12,1) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: 800;
+        }
+
+        .h1-em {
+            color: #b6a4c4;
+            font-style: italic;
+            font-size: 64px;
+        }
+
+        .nuke-text {
+            width: 60%;
+            margin: auto;
+            height: 500px;
+            background-color: #28242b;
+            padding: 50px;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0px 10px 15px -3px rgba(255,255,255,0.2);
+            border: 1px solid transparent;
+            border-radius: 15px;
+            font-size: 36px;
+        }
+        
+        .nuke-text img {
+            width: 400px;
+            height: 400px;
+            margin-left: 100px;
+            box-shadow: 0px 10px 15px -3px rgba(0,0,0,0.2);
+            border: 1px solid transparent;
+            border-radius: 15px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="img/logo.png" alt="logo">
+        <div>
+            <h1>Forgotten Islands</h1>
+            <h2>A Minecraft event</h2>
+            <a class="discord" href="https://discord.gg/Eg4Mzvmqnc">Join the Discord</a>
+        </div>
+    </header>
+    
+    <main>
+        <h1>4 islands.</h1>
+
+        <div class="island-cols">
+            <div class="island-col">
+                <img src="img/island_placeholder.png" alt="island placeholder">
+                <h2 class="desert-em">The Desert</h2>
+            </div>
+            <div class="island-col">
+                <img src="img/island_placeholder.png" alt="island placeholder">
+                <h2 class="snow-em">The Snow</h2>
+            </div>
+            <div class="island-col">
+                <img src="img/island_placeholder.png" alt="island placeholder">
+                <h2 class="plains-em">The Plains</h2>
+            </div>
+            <div class="island-col">
+                <img src="img/island_placeholder.png" alt="island placeholder">
+                <h2 class="jungle-em">The Jungle</h2>
+            </div>
+        </div>
+
+        <h1>Scattered throughout these forgotten lands,<br><span class="h1-em">the future or the past will be held before you.</span></h1>
+
+        <div class="nuke-text">
+            <p>And there is a lab in the centre of the islands, owned by a crazy scientist who created a nuke...</p>
+            <img src="img/nuke.png">
+        </div>
+
+        <h1>Join our Discord and have fun!</h1>
+        <a class="discord" href="https://discord.gg/Eg4Mzvmqnc">Join</a>
+
+        <p>Webpage by Neodel</p>
+        <a class="discord" href="../index.html">Check out my stuff!</a>
+
+    </main>
+</body>
+</html>

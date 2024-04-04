@@ -19,8 +19,6 @@ HTTP server for testing website
 - Homepage with portfolio
 - Time website with timer, stopwatch and world clock
 - Meme Soundboard
-- Useless Keyboard (inspired by GD Colon) 
-- Random Story Generator
-- The HTML Game - a game involving lots of html objects
-- Tree that grows in the background
+- HTML Chaos - a game involving lots of html objects moving around and doing stuff
+- A tree that grows in the background while you work
 - Change the World - an interactive map where you can drag around and delete countries
