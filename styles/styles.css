@@ -16,8 +16,12 @@ nav {
     
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: flex-start;
     align-items: center;
+}
+
+nav p, a {
+    margin: 0 50px 0 0;
 }
 
 header {
@@ -40,12 +44,20 @@ header {
 }
 
 main {
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.content {
     width: 50%;
     margin: 0 auto;
 
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: left;
     justify-content: flex-start;
     text-align: left;
 }
