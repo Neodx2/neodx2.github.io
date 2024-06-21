@@ -9,34 +9,56 @@
     <button id="btn" style="position:absolute; height: 50px; width: 50px;" onclick="count_clicks()">Click me!</button>
 
     <script>
+        var vw = window.innerWidth;
+        var vh = window.innerHeight;
 
         var count = 0;
         function count_clicks() {
             var elem = document.getElementById("clicks")
             count++;
-            elem.innerHTML = "HTML CHAOS - Clicks: " + count.toString()
+            elem.innerHTML = "HTML CHAOS - Clicks: " + count.toString();
         }
 
-        var id = null;
+        var idh = null;
+        var idv = null;
         function move_button() {
-            btn = document.getElementById("btn")
-            var pos = 0;
-            var right = true
-            clearInterval(id);
-            id = setInterval(frame, 1);
-            function frame() {
-                if (pos == 1800 || pos == 0) {
+            var btn = document.getElementById("btn");
+            var posh = 0;
+            var posv = 0;
+            var right = true;
+            var top = true;
+
+            clearInterval(idv);
+            clearInterval(idh);
+            idh = setInterval(frame_horizontal, 1);
+            idv = setInterval(frame_vertical, 1);
+
+            function frame_horizontal() {
+                vh = window.innerHeight;
+                if (posh == vw - 50 || posh == 0) {
                     right = !right;
                 }
                 if (!right) { 
-                    pos++; 
+                    posh++; 
                 } else { 
-                    pos--; 
+                    posh--; 
                 }
-                btn.style.left = pos + 'px';
+                btn.style.left = posh + 'px';
+            }
+
+            function frame_vertical() {
+                vw = window.innerWidth;
+                if (posv == vh - 50 || posv == 0) {
+                    top = !top;
+                }
+                if (!top) { 
+                    posv++; 
+                } else { 
+                    posv--; 
+                }
+                btn.style.top = posv + 'px';
             }
         }
-        
 
         move_button();
     </script>
