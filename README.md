@@ -1,6 +1,6 @@
-# neodarkless.me
+# Neodx2
 ## VISIT HERE:
-https://neodarkless.me
+https://neodx2.tech
 ## USEFUL TOOLS FOR ME
 [Flexbox poster](https://css-tricks.com/wp-content/uploads/2022/02/css-flexbox-poster.png)
 \
